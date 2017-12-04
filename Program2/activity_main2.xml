@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wolf.application2.Main2Activity">
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="396dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alert"
+        tools:layout_editor_absoluteX="179dp"
+        tools:layout_editor_absoluteY="49dp"
+        android:layout_below="@+id/button2"
+        android:layout_alignEnd="@+id/listView"
+        android:layout_marginEnd="21dp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="298dp"
+        android:layout_height="249dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="97dp"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="96dp" />
+</RelativeLayout>

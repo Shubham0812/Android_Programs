@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
                 PendingIntent pi1 = PendingIntent.getActivity(MainActivity.this, 0, int1, 0);
                 Notification not1 = new Notification.Builder(MainActivity.this)
                         .setTicker("Ticker Title")
-                        .setContentTitle("Mohan\'s Notification")
-                        .setContentText("This is Notification Example")
+                        .setContentTitle("Shubham\'s Notification")
+                        .setContentText("This is to notify you something")
                         .setSmallIcon(R.mipmap.ic_launcher)
-                        .addAction(R.mipmap.ic_launcher, "Action 1", pi1)
-                        .addAction(R.mipmap.ic_launcher_round, "Action 2", pi1)
+                        .addAction(R.mipmap.ic_launcher, "Agree?", pi1)
+                        .addAction(R.mipmap.ic_launcher_round, "Sad!", pi1)
                         .setContentIntent(pi1).getNotification();
                 not1.flags = Notification.FLAG_AUTO_CANCEL;
                 NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);

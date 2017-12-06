@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
-    String contacts[]={"Ajay","Sachin","Sumit","Tarun","Yogesh"};
+    String contacts[]={"Shubham","Shashi","Deepak","Piyush","Gulshan"};
     Button b,bx;
     ProgressDialog pd;
     @Override
@@ -46,22 +46,7 @@ public class Main2Activity extends AppCompatActivity {
                 pd.show();
                 pd.setMax(100);
                 pd.setProgress(00);
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        for(int i = 0;i<12;i++){
-                        try {
-                            if(pd.getProgress()== pd.getMax()){
-                                Toast.makeText(Main2Activity.this, "Done", Toast.LENGTH_SHORT).show();
-                                finish();
-                            }
-                            Thread.sleep(1000);
-                            pd.incrementProgressBy(10);
-                        } catch (Exception e) {
-                        }
-                    }
-                    }
-                }).start();
+  
             }
         });
     }
@@ -74,17 +59,17 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     public boolean onContextItemSelected(MenuItem item){
         if(item.getItemId()==R.id.i1){
-            Toast.makeText(this, "Option1 babes", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Option1 is selected", Toast.LENGTH_SHORT).show();
         }
         else if(item.getItemId()==R.id.i2){
-            Toast.makeText(this, "Options2 bitch", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Options 2 is selected", Toast.LENGTH_SHORT).show();
         }
         return  super.onContextItemSelected(item);
     }
     public void onClickShowAlert(View view){
         AlertDialog.Builder myalert = new AlertDialog.Builder(this);
-        myalert.setTitle("Idiot Checker");
-        myalert.setMessage("Are you an idiot ?");
+        myalert.setTitle("Custom Alert");
+        myalert.setMessage("Shall we continue ?");
         myalert.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
